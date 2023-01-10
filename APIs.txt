@@ -1,0 +1,318 @@
+const express = require('express');
+const app = express();
+
+let data = new Date();
+
+app.get('/', (req, res) => {
+    let dia_atual = data.getDate();
+    let dia_json = {dia: dia_atual};
+    
+res.json(dia_json);
+})
+
+
+app.listen(8080, () => {
+    console.log("Servidor iniciado")
+});
+
+_____________________________________________________
+
+const express = require('express');
+const app = express();
+
+let data = new Date();
+let mes = data.getMonth();
+
+let estacaoAno;
+
+if(mes == 0 || mes == 1 || mes == 2)
+{    estacaoAno = 'Verão';} 
+else if(mes == 3 || mes == 4 || mes == 5) 
+{   estacaoAno = 'Outono';} 
+else if(mes == 6 || mes == 7 || mes == 8)
+{    estacaoAno = 'Inverno';} 
+else
+{    estacaoAno = 'Primavera';}
+
+app.get('/', (req, res) => {
+    res.json({estacao: estacaoAno});
+});
+
+
+app.listen(8080 , () => {
+{
+    console.log('Servidor iniciado');
+});
+
+_______________________________________________________
+
+const express = require('express');
+const app = express();
+
+let nome = {nome: 'Marcus Fenix'};
+
+app.get('/', (req, res) => {
+    res.json(nome);
+});
+
+app.listen(8080, () => {
+    console.log("Servidor iniciado");
+});
+
+_______________________________________________
+
+const express = require('express');
+const app = express();
+
+let mensagem = {mensagem: 'Bom dia'};
+
+app.get('/', (req, res) => {
+    res.json(mensagem);
+});
+
+app.listen(8080, () => {
+    console.log("Servidor iniciado");
+});
+
+_____________________________________________
+
+const express = require('express');
+const application = express();
+
+let senha = '132541ab';
+let nivelSenha = senha.length > 7 ? 'Senha forte' : 'Senha fraca';
+
+let resposta = {senha: nivelSenha};
+
+application.get('/', (req, res) => {
+    res.json(resposta);
+});
+
+application.listen(8080 , () => {
+    console.log('Servidor iniciado');
+});
+
+_____________________________________________________
+
+const express = require('express');
+const application = express();
+
+application.get('/', (req, res) => {
+    res.json({mensagem: 'Bem-vindo ao sistema'});
+});
+
+application.listen( 8080 , () => {
+    console.log('O servidor iniciou');
+});
+
+_____________________________________________________
+
+const express = require('express');
+const app = express();
+
+let candidato_A = 53;
+let candidato_B = 49;
+
+let mais_votos = candidato_A > candidato_B ? candidato_A : candidato_B;
+let votos_json = {eleicao: mais_votos};
+
+app.get('/', (req, res) => {
+    res.json(votos_json);
+})
+
+app.listen(8080 , () => {
+    console.log('Servidor iniciado');
+});
+
+_________________________________________________
+
+const express = require('express');
+const app = express();
+
+let id_aplicativo = 1;
+
+let aplicativos = [
+    {nome: 'Calculadora', linguagem: 'PHP'},
+    {nome: 'Chat', linguagem: 'C#'},
+    {nome: 'Transporte', linguagem: 'Java'}
+];
+
+let tecnologia = aplicativos[id_aplicativo];
+
+app.get('/', (req, res) => {
+    res.json(tecnologia);
+});
+
+
+app.listen(8080 , () => {
+    console.log('Servidor iniciado');
+});
+
+___________________________________________________
+
+const express = require('express');
+const app = express();
+
+let mensagem = {mensagem: 'Mensagem do servidor'};
+
+app.get('/', (req, res) => {
+    res.json(mensagem);
+});
+
+app.listen(8080, () => {
+   console.log("Servidor iniciado") ;
+});
+
+______________________________________________________
+
+const express = require('express');
+const app = express();
+
+let nome = 'Jack';
+let sobrenome = 'Joyce';
+
+let nome_completo = nome+" "+sobrenome;
+
+let nome_json = {nome: nome_completo};
+
+app.get('/', (req, res) => {
+    res.json(nome_json);
+});
+
+app.listen(8080, () => {
+   console.log("Servidor iniciado");
+});
+
+_____________________________________________________
+
+const express = require('express');
+const application = express();
+
+let email = {email: 'johndoe@email.com'};
+
+application.get('/', (req, res) => {
+    res.json(email);
+});
+
+application.listen(8080, () => {
+    console.log("Servidor iniciado");
+});
+
+__________________________________________________
+
+const express = require('express');
+const app = express();
+
+let email = {email: 'superteste@email.com'};
+
+app.get('/', (req, res) => {    
+     res.json(email);
+});
+
+app.listen(8080, () => {
+    console.log('Servidor iniciado');
+});
+
+_____________________________________________________
+
+const express = require('express');
+const app = express();
+
+let idade = 17;
+let alistamento;
+
+if (idade == 17)
+
+{
+    alistamento = {alistamento: 'sim'};
+}
+else
+
+{
+    alistamento = {alistamento: 'não'};
+}
+
+app.get('/' , (req, res) => {
+    
+res.json(alistamento);
+});
+
+app.listen(8080, () => {
+   
+console.log("Servidor iniciado");
+});
+
+____________________________________________________
+
+CORRIGIDO
+
+const express = require('express');
+const application = express();
+
+let cpf = {cpf: '123.456.789-00'};
+
+application.get( '/', (req, res) =>
+ {
+    
+res.json(cpf);
+});
+
+application listen(8080, () => {
+   console.log("Servidor iniciado");
+});
+
+_____________________________________________________
+
+CORRIGIR
+
+const express = require('express');
+const app = express();
+
+let data = new Date();
+
+let ano_nascimento = 1991;
+let ano_atual = data.getFullYear();
+
+let idade = ano_atual - ano_nascimento;
+
+##let idade_json;##
+
+app.get('/', (req, res) => {
+    res.json(idade_json);
+});
+
+app.listen(8080, () => {
+   console.log("Servidor iniciado");
+});
+
+_____________________________________________________
+
+CORRIGIR
+
+const express = require('express');
+const app = express();
+
+let jogos = ['Gears 5', 'Halo Infinite', 'Perfect Dark', 'Forza Horizon'];
+let jogo_escolhido = ##2##;
+
+let jogo_json = ##jogo_escolhido##;
+
+app.get('/', (req, res) => {
+    res.json(jogo_json);
+});
+
+app.listen(8080 , () => {
+    console.log('Servidor iniciado');
+});
+
+
+
+
+
+
+
+
+
+
+
+
